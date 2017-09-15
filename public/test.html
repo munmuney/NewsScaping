@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie News Scraper</title>
+	<!-- Linking to reset css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<!-- Link to google fonts CDN -->
+	<link href="https://fonts.googleapis.com/css?family=Cantata+One|Martel|Roboto" rel="stylesheet">
+	<!-- setting viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- Link to custom css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<!-- Link to jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="background">
+		<section>
+			<header>
+				<div id="h1-background">
+					<h1>Movie News</h1>
+				</div>
+				<form action="/api/scrape" method="GET">
+					<button id="get-articles" type="submit">Get New Articles</button>
+				</form>
+			</header>
+			<main>
+				<article data-id="{{this._id}}">
+					<a href="{{this.link}}">Earth based heroes are on the table for guardains of the galaxy 3
+					</a>
+					<hr>
+					<summary>Pirates of the Caribbean isn’t over yet – Dead Men Tell No Tales’ post-credits scene teases a very exciting sixth movie.</summary>
+					<div class="button-bar">
+						<button>Comment</button>
+						<button>View Comments</button>
+					</div>
+					<div class="create-comment-container">
+						<form action="/api/new/comment/{{this.id}}" method="POST">
+							<textarea name="body" required placeholder="Comment here..."></textarea>
+							<input type="text" name="author" placeholder="Alias here..." required>
+							<button type="submit">Post Comment</button>
+						</form>
+					</div>
+					<div class="comments-container">
+						<div class="comment" data-id="{{this._id}}">
+							<button class="delete-comment">Delete Comment</button>
+							<h3>Scumbag Steve</h3>
+							<h3>Can somebody lend me 20 bucks. Can somebody lend me 20 bucks. Can somebody lend me 20 bucks. Can somebody lend me 20 bucks. Can somebody lend me 20 bucks. Can somebody lend me 20 bucks. Can somebody lend me 20 bucks.</h3>
+							<h3>Wed May 24 2017 14:25:05 GMT-0400 (EDT)</h3>
+						</div>
+						<div class="comment" data-id="{{this._id}}">
+							<button class="delete-comment">Delete Comment</button>
+							<h3>Bad Luck Brian</h3>
+							<h3>I can lend you 20 bucks Steve.</h3>
+							<h3>Wed May 24 2017 14:26:05 GMT-0400 (EDT)</h3>
+						</div>
+					</div>
+				</article>
+			</main>
+			<footer>
+				<h4>Coded by <a href="https://murmuring-mountain-70307.herokuapp.com/index.html" target="_blank">Daniel Cross</a></h4>
+			</footer>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

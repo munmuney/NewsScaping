@@ -1,0 +1,260 @@
+
+body, html {
+	height: 100%;
+}
+
+#background {
+	height: 100%;
+	background-image: url("https://image.freepik.com/free-photo/order-food-table-empty-background_1253-744.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: scroll;
+}
+
+
+
+header {
+	position: relative;
+	margin-top: 45px;
+}
+
+
+
+h1{
+	text-align: center;
+	color: white;
+	font-size: 72px;
+	font-family: "Walter Turncoat";
+	padding: 5px 0px 15px 0px;
+	text-shadow: 4px 2px 3px black;
+
+	background-color: #800000;
+	border-radius: 4px;
+	box-shadow: 4px 4px 12px #111110;
+
+}
+
+button:focus {
+	outline: none;
+}
+
+#get-articles{
+	display: block;
+	margin: 30px auto;
+	padding: 8px 20px;
+	font-family: "Architects Daughter";
+	font-size: 20px;
+	background-color: white;
+	border: 3px solid black;
+	color: black;
+}
+
+#get-articles:hover{
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
+
+.article {
+	padding: 2px 0px;
+}
+
+article {
+	width: 85%;
+	margin: 10px auto;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 2px 3px 5px black;
+	overflow: auto;
+}
+
+a {
+	font-family: "Lato";
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 38px;
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	font-family: "Lato";	
+}
+
+summary {
+	font-family: "Lato";	
+	font-size: 20px;
+	color: black;
+}
+
+
+.button-bar {
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
+.button-bar button {
+	float: right;
+	margin: 2px;
+	border: none;
+	background-color: #800000;
+	color: white;
+	font-family: "Lato";
+}
+
+.button-bar button:hover{
+	box-shadow: 1px 1px 2px black;
+}
+
+
+
+.create-comment-container {
+	clear: right;
+	background-color: #800000;
+	padding-top: 5px;
+	overflow: auto;
+}
+
+.create-comment-container * {
+	display: block;
+	margin: 8px auto;
+}
+
+.create-comment-container h3 {
+	color: white;
+	margin-left: 5px;
+}
+
+textarea, input[name="commentator"] {
+	margin: 13px;
+	color: black;
+	background-color: white;
+	font-family: "Lato";
+	font-size: 14px;
+	border: none;
+}
+
+textarea {	
+	height: 50px;
+	width: 97%;
+	resize: vertical;
+	max-height: 12	0px;
+}
+
+
+textarea:focus, input[name="commentator"]:focus {
+	border-left: 10px solid white;
+}
+
+.create-comment-container button {
+	border: none;
+	background-color: white;
+	color: black;
+	height: 24px;
+	font-family: "Lato";
+}
+
+.create-comment-container button:hover, .delete-comment:hover {
+	background-color: black;
+	color: white;
+}
+
+.comment {
+	background-color: #800000;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.delete-comment {
+	float: right;
+	border: none;
+	background-color: white;
+	color: black;
+	font-family: "Lato";
+}
+
+
+.comment h4 {
+	font-family: "Lato";	
+	color: white;
+	text-align: left;
+}
+
+.comment h6 {
+	font-family: "Lato";	
+	color: white;
+	text-align: right;
+}
+
+.display-none {
+	display: none;
+}
+
+
+/*Media Queries*/
+@media screen and (max-width: 980px)
+{
+	.article {
+		width: 80%;
+	}
+
+	.article button {
+		font-size: 13px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	.button-bar {
+		margin-top: 8px;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	.article {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	h1 {
+		font-size: 65px;
+	}
+
+	.article {
+		width: 70%;
+	}
+
+	a {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	summary {
+		font-size: 18px;
+	}
+
+	textarea {
+		width: 90%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

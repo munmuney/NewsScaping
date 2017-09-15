@@ -1,0 +1,54 @@
+<div id="background">
+	<section class="container">
+
+		<header>
+			<h1>WSJ Food News</h1>
+
+			<form action="/api/scrape" method="GET">
+				<button id="get-articles" type="submit">Scrape for Articles!</button>
+			</form>
+
+		</header>
+
+		<div class = "article">
+
+			{{#each article}}
+
+			<article data-id="{{this._id}}">
+				<a href="{{this.link}}" target="_blank">{{this.title}}</a>
+				<p>{{this.date}}</p>				
+				<hr>
+
+				<summary>{{this.summary}}</summary>
+				<p class ="text-center"><img src={{this.image}} ></p>
+				<div class="button-bar">
+					<button class="make-comment">Add a Comment</button>
+					<button class="view-comment">Show Comments</button>
+				</div>
+				<div class="create-comment-container display-none">
+					<h3><strong>Adding a comment: </strong></h3>
+					<form action="/api/new/comment/{{this.id}}" method="POST">
+						<input type="text" name="commentator" placeholder="Add your name..." required>
+
+						<textarea name="body" required placeholder="   Add a Comment..."></textarea>
+						
+						<button type="submit">Post Comment</button>
+					</form>
+				</div>
+				<div class="comments-container display-none">
+					<h3><strong>Comments: </strong></h3>
+					{{#each this.comments}}
+					<div class="comment" data-id="{{this._id}}">
+						<button class="delete-comment">Delete Comment</button>
+						<h4>{{this.body}}</h4>
+						<h6>Commented By: {{this.commentator}}</h6>
+						<h6>Posted: {{this.postedAt}}</h6>
+					</div>
+					{{/each}}
+				</div>
+			</article>
+			{{/each}}
+		</div>
+
+	</section>
+</div>
