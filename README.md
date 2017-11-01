@@ -1,7 +1,12 @@
 # NewsScrape
+
+### Overview
 This assignments creates a web app that lets users view and leave comments on the latest news.
 
-## How to Use
+![FrontPage](RM/page.png)
+
+
+### Instructions
 Click the "Scrape for Articles"  button. Users can click title to redirect you to the WSJ link.  Users can also add comments and delete comments.  
 
 ### Technologies Used
@@ -22,3 +27,5 @@ Click the "Scrape for Articles"  button. Users can click title to redirect you t
 - Cheerio
 - Body-Parser
 - Morgan
+
+### **[Demo](https://nameless-atoll-68452.herokuapp.com/)**
